@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商務控制後台</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#">商務控制後台</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" href="index.html">首頁<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="list.html">列表</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-lg-3 col-6">
+                <div class="card h-100 rounded-0">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="fas fa-coins fa-4x text-dark"></div>
+                        <div class="text-center w-100 ml-2">
+                            <p class="h5">本日營收</p>
+                            <p class="h3">234,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="card h-100 rounded-0">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="fas fa-user-plus fa-4x text-dark"></div>
+                        <div class="text-center w-100 ml-2">
+                            <p class="h5">會員增加</p>
+                            <p class="display-4">128</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="card h-100 rounded-0">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="fas fa-palette fa-4x text-dark"></div>
+                        <div class="text-center w-100 ml-2">
+                            <p class="h5">作品新增</p>
+                            <p class="display-4">36</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="card h-100 rounded-0">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="fas fa-eye fa-4x text-dark"></div>
+                        <div class="text-center w-100 ml-2">
+                            <p class="h5">看展人數</p>
+                            <p class="h3">2,358</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid my-4">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card h-100 rounded-0">
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <div class="text-center">
+                            <p>目前線上人數</p>
+                            <p class="display-3">125</p>
+                        </div>
+                        <div class="progress mt-5" style="height: 18px;">
+                            <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65"
+                                aria-valuemin="0" aria-valuemax="100">PC</div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 35%"
+                                aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">Mobile</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="card rounded-0">
+                    <div class="card-header">最新作品上架</div>
+                    <div class="card-body">
+                        <div class="text-right">
+                            <a href="#" class="btn btn-outline-info btn-sm" data-toggle="modal" data-title="作品管理"
+                                data-backdrop="static" data-target="#manageModal">作品管理</a>
+                        </div>
+                        <table class="table table-hover mt-3">
+                            <thead>
+                                <tr>
+                                    <th width="20%" scope="col">類型</th>
+                                    <th>作者</th>
+                                    <th width="30%" scope="col">作品</th>
+                                    <th width="20%" class="text-right" scope="col">參觀票價</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>靜態風景</th>
+                                    <td>Ricardo Gomez Angel</td>
+                                    <td>佛羅里達雪景</td>
+                                    <td class="text-right">$250</td>
+                                </tr>
+                                <tr>
+                                    <th>人像攝影</th>
+                                    <td>Erik Mclean</td>
+                                    <td>整個城市都是我的作品集</td>
+                                    <td class="text-right">$300</td>
+                                </tr>
+                                <tr>
+                                    <th>圖畫攝影</th>
+                                    <td>Lucas Benjamin</td>
+                                    <td>藍煙‧橘霧</td>
+                                    <td class="text-right text-success">免費/自由打賞</td>
+                                </tr>
+                                <tr>
+                                    <th>靜態風景</th>
+                                    <td>Ishan</td>
+                                    <td>汪洋沈船</td>
+                                    <td class="text-right">$200</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text-right">票價總額</td>
+                                    <td class="text-right">$750</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mb-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card rounded-0">
+                    <div class="card-header">會員比例</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <canvas id="barCanvas"></canvas>
+                            </div>
+                            <div class="col-lg-4">
+                                <h5>Details</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad eveniet sequi neque harum
+                                    tempore exercitationem nostrum dolores, eaque quidem debitis. Facere cum obcaecati
+                                    exercitationem enim pariatur corporis, maiores eum consequatur!</p>
+                                <h6>會員</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 43%" aria-valuenow="43"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="mt-2">訪客</h6>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 21%"
+                                        aria-valuenow="21" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="mt-2">未知</h6>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 36%"
+                                        aria-valuenow="36" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100 rounded-0">
+                    <div class="card-header">用戶瀏覽器比例</div>
+                    <div class="card-body d-flex align-items-center">
+                        <canvas class="chart-item"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="card rounded-0">
+            <div class="card-header">月營運狀態</div>
+            <div class="card-body">
+                <div class="d-flex mb-4">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <label for="month" 月份></label>
+                            <select name="month" id="month" class="form-control form-control-sm">
+                                <option value="1">1月</option>
+                                <option value="2">2月</option>
+                                <option value="3">3月</option>
+                                <option value="4">4月</option>
+                                <option value="5">5月</option>
+                                <option value="6">6月</option>
+                                <option value="7">7月</option>
+                                <option value="8">8月</option>
+                                <option value="9" selected>9月</option>
+                                <option value="10">10月</option>
+                                <option value="11">11月</option>
+                                <option value="12">12月</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ml-auto">
+                        <a href="#" class="btn btn-outline-info btn-sm">下載報表</a>
+                        <a href="#" class="btn btn-outline-info btn-sm" data-toggle="modal" data-title="展覽管理"
+                            data-backdrop="static" data-target="#showModal">展覽管理</a>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th>日期</th>
+                                <th>作品數</th>
+                                <th>觀看數</th>
+                                <th>評論數</th>
+                                <th>會員新增數</th>
+                                <th class="text-right">票價收入</th>
+                                <th class="text-right">淨利潤</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>9/14</td>
+                                <td>84</td>
+                                <td>1249</td>
+                                <td>643</td>
+                                <td>101</td>
+                                <td class="text-right">312,250</td>
+                                <td class="text-right">277,250</td>
+                            </tr>
+                            <tr>
+                                <td>9/13</td>
+                                <td>76</td>
+                                <td>1143</td>
+                                <td>586</td>
+                                <td>84</td>
+                                <td class="text-right">285,750</td>
+                                <td class="text-right">248,750</td>
+                            </tr>
+                            <tr>
+                                <td>9/12</td>
+                                <td>93</td>
+                                <td>1164</td>
+                                <td>708</td>
+                                <td>76</td>
+                                <td class="text-right">291,000</td>
+                                <td class="text-right">263,000</td>
+                            </tr>
+                            <tr>
+                                <td>9/11</td>
+                                <td>65</td>
+                                <td>1095</td>
+                                <td>523</td>
+                                <td>71</td>
+                                <td class="text-right">273,750</td>
+                                <td class="text-right">241,250</td>
+                            </tr>
+                            <tr>
+                                <td>9/10</td>
+                                <td>78</td>
+                                <td>1326</td>
+                                <td>839</td>
+                                <td>102</td>
+                                <td class="text-right">331,500</td>
+                                <td class="text-right">298,850</td>
+                            </tr>
+                            <tr>
+                                <td>9/9</td>
+                                <td>91</td>
+                                <td>1685</td>
+                                <td>921</td>
+                                <td>127</td>
+                                <td class="text-right">421,250</td>
+                                <td class="text-right">376,150</td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="text-right">月總營收</td>
+                                <td class="text-right">1,915,500</td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="text-right">月總淨利潤</td>
+                                <td class="text-right">1,705,250</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container-fluid mb-4">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search for..."
+                        aria-label="Recipient's username" aria-describedby="button-addon2" data-toggle="tooltip"
+                        data-placement="bottom" title="按下 Enter 快速搜尋">
+                    <div class="input-group-append">
+                        <button class="btn btn-info" type="button" id="button-addon2">Go!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 text-right">
+                <a href="#" class="btn btn-info" data-toggle="modal" data-title="快速開展" data-backdrop="static"
+                    data-target="#manageModal"><i class="far fa-image mr-2"></i>快速開展</a>
+            </div>
+        </div>
+        <table class="table table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th width="1%">#</th>
+                    <th width="40%">作品名稱</th>
+                    <th width="15%">作者</th>
+                    <th>Email</th>
+                    <th width="5%">狀態</th>
+                    <th width="10%" class="text-right">票價</th>
+                    <th class="text-center">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td><a href="#">佛羅里達雪景</a><span class="badge badge-pill badge-danger ml-2">Hot!</span></td>
+                    <td>Ricardo Gomez Angel</td>
+                    <td>Ricardo@mail.com</td>
+                    <td>已展出</td>
+                    <td class="text-right">$250</td>
+                    <td class="text-center">
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Button group with nested dropdown">
+                            <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                                data-title="作品編輯 佛羅里達雪景" data-name="Ricardo Gomez Angel" data-work="佛羅里達雪景"
+                                data-price="$250" data-backdrop="static" data-target="#editModal">編輯</button>
+                            <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                                data-title="作品查看 佛羅里達雪景" data-name="Ricardo Gomez Angel" data-work="佛羅里達雪景"
+                                data-mail="Ricardo@mail.com" data-status="已展出" data-price="$250" data-backdrop="static"
+                                data-target="#statusModal">查看</button>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button id="btnGroupDrop1" type="button" class="btn btn-outline-info dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    更多
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left"
+                                    aria-labelledby="btnGroupDrop1">
+                                    <a class="dropdown-item" data-toggle="modal" data-title="修改票價 佛羅里達雪景"
+                                        data-name="Ricardo Gomez Angel" data-work="佛羅里達雪景" data-backdrop="static"
+                                        data-target="#priceModal" href="#">修改票價</a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-title="暫時下架 佛羅里達雪景"
+                                        data-backdrop="static" data-target="#offModal">暫時下架</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger" href="#" data-toggle="modal"
+                                        data-title="刪除作品 佛羅里達雪景" data-backdrop="static"
+                                        data-target="#deleteModal">刪除作品</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td><a href="#">藍煙‧橘霧</a><span class="badge badge-pill badge-primary ml-2">New</span></td>
+                    <td>Lucas Benjamin</td>
+                    <td>Lucas@mail.com</td>
+                    <td>已展出</td>
+                    <td class="text-right text-success">免費/自由打賞</td>
+                    <td class="text-center">
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Button group with nested dropdown">
+                            <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                                data-title="作品編輯 藍煙‧橘霧" data-name="Lucas Benjamin" data-work="藍煙‧橘霧"
+                                data-price="免費/自由打賞" data-backdrop="static" data-target="#editModal">編輯</button>
+                            <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                                data-title="作品查看 藍煙‧橘霧" data-name="Lucas Benjamin" data-work="藍煙‧橘霧"
+                                data-mail="Lucas@mail.com" data-status="已展出" data-price="免費/自由打賞" data-backdrop="static"
+                                data-target="#statusModal">查看</button>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button id="btnGroupDrop2" type="button" class="btn btn-outline-info dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    更多
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left"
+                                    aria-labelledby="btnGroupDrop2">
+                                    <a class="dropdown-item" data-toggle="modal" data-title="修改票價 藍煙‧橘霧"
+                                        data-name="Lucas Benjamin" data-work="藍煙‧橘霧" data-backdrop="static"
+                                        data-target="#priceModal" href="#">修改票價</a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-title="暫時下架 藍煙‧橘霧"
+                                        data-backdrop="static" data-target="#offModal">暫時下架</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger" href="#" data-toggle="modal"
+                                        data-title="刪除作品 藍煙‧橘霧" data-backdrop="static"
+                                        data-target="#deleteModal">刪除作品</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="table-danger">
+                    <th>3</th>
+                    <td><a href="#">天空的盡頭</a></td>
+                    <td>Lenstravelier</td>
+                    <td>Lenstravelier@mail.com</td>
+                    <td class="text-danger">未展出</td>
+                    <td class="text-right">$300</td>
+                    <td class="text-center">
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Button group with nested dropdown">
+                            <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                                data-title="作品編輯 天空的盡頭" data-name="Lenstravelier" data-work="天空的盡頭" data-price="$300"
+                                data-backdrop="static" data-target="#editModal">編輯</button>
+                            <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                                data-title="作品查看 天空的盡頭" data-name="Lenstravelier" data-work="天空的盡頭"
+                                data-mail="Lenstravelier@mail.com" data-status="未展出" data-price="$300"
+                                data-backdrop="static" data-target="#statusModal">查看</button>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button id="btnGroupDrop3" type="button" class="btn btn-outline-info dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    更多
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left"
+                                    aria-labelledby="btnGroupDrop3">
+                                    <a class="dropdown-item" data-toggle="modal" data-title="修改票價 天空的盡頭"
+                                        data-name="Lenstravelier" data-work="天空的盡頭" data-backdrop="static"
+                                        data-target="#priceModal" href="#">修改票價</a>
+                                    <a class="dropdown-item disabled" href="#" aria-disabled="true">暫時下架</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger" href="#" data-toggle="modal"
+                                        data-title="刪除作品 天空的盡頭" data-backdrop="static"
+                                        data-target="#deleteModal">刪除作品</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 80%"
+                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        <p class="text-secondary mb-0">...</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        <p class="text-secondary mb-0">...</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        <p class="text-secondary mb-0">...</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        <p class="text-secondary mb-0">...</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <footer class="py-3 bg-light">
+        <div class="container">
+            <p class="text-secondary text-center my-auto">六角學院後台管理系統</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+
+    <!-- 作品管理 -->
+    <div class="modal fade" id="manageModal" tabindex="-1" aria-labelledby="manageModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="manageModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">使用者名稱</label>
+                            <input type="text" class="form-control" id="username" aria-describedby="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="workname">作品名稱</label>
+                            <input type="text" class="form-control" id="workname">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">票價</label>
+                            <input type="number" class="form-control" min="0" id="price">
+                        </div>
+                        <div class="form-group">
+                            <label for="upload">上傳你的作品</label>
+                            <input type="file" class="form-control-file" id="upload">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">上傳</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 展覽管理 -->
+    <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="showModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="showModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">使用者名稱</label>
+                            <input type="text" class="form-control" id="username" aria-describedby="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="workname">作品名稱</label>
+                            <input type="text" class="form-control" id="workname">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">展覽類別</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>靜態風景</option>
+                                <option>人像攝影</option>
+                                <option>圖畫攝影</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">修改</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 作品編輯 -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="editModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">作者名稱</label>
+                            <input type="text" readonly class="form-control-plaintext text-primary" id="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="workname">作品名稱</label>
+                            <input type="text" class="form-control" id="workname">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">票價</label>
+                            <input type="number" class="form-control" min="0" id="price">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">編輯</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 作品查看 -->
+    <div class="modal fade" id="statusModal" tabindex="-1" aria-labelledby="statusModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title text-white" id="statusModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">作者名稱</label>
+                            <input type="text" readonly class="form-control-plaintext text-primary" id="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="workname">作品名稱</label>
+                            <input type="text" readonly class="form-control-plaintext text-primary" id="workname">
+                        </div>
+                        <div class="form-group">
+                            <label for="mail">Email</label>
+                            <input type="text" readonly class="form-control-plaintext text-primary" id="mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="status">狀態</label>
+                            <input type="text" readonly class="form-control-plaintext text-primary" id="status">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">票價</label>
+                            <input type="text" readonly class="form-control-plaintext text-primary" id="price">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">確定</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 修改票價 -->
+    <div class="modal fade" id="priceModal" tabindex="-1" aria-labelledby="priceModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="priceModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">作者名稱</label>
+                            <input type="text" readonly class="form-control-plaintext text-primary" id="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="workname">作品名稱</label>
+                            <input type="text" readonly class="form-control-plaintext text-primary" id="workname">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">票價</label>
+                            <input type="number" class="form-control" min="0" id="price">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">修改</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 暫時下架 -->
+    <div class="modal fade" id="offModal" tabindex="-1" aria-labelledby="offModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title" id="offModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>你確定要下架此作品嗎？</p>
+                    <small class="text-secondary">下架後還可再次上架</small>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">下架</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 刪除作品 -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <h5 class="modal-title text-white" id="deleteModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>你確定要刪除此作品嗎？</p>
+                    <small class="text-danger">刪除後作品會永遠消失！</small>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">刪除</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>
